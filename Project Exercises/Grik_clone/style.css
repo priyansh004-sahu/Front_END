@@ -1,0 +1,969 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #0e0e0e;
+  color: wheat;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 75rem;
+  background-color: #181715;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  margin-top: 20px;
+  border: 0.1px solid #dac5a7;
+}
+nav img {
+  width: 60px;
+  padding-right: 14px;
+}
+nav .links {
+  display: flex;
+  align-items: center;
+}
+nav .links a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 14px;
+  color: #dac5a7;
+  position: relative;
+}
+nav button {
+  width: 90px;
+  margin-left: 15px;
+  padding: 8px 0px;
+  font-size: 0.9rem;
+  font-weight: 2300;
+  background-color: #dac5a7;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .links a {
+    display: none;
+  }
+  nav {
+    gap: 7rem;
+  }
+  nav button {
+    margin-right: 2rem;
+  }
+}
+.links a:hover {
+  text-decoration: underline;
+}
+
+main {
+  width: 100%;
+}
+
+section .view-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 4rem;
+}
+section .view-1 img {
+  width: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section .view-1 h1 {
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 90;
+  padding-bottom: 10px;
+}
+section .view-1 p {
+  font-weight: 100;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+  margin: 1rem 0;
+  opacity: 0.6;
+  padding: 1.5rem 0;
+}
+section .view-1 p br {
+  display: none;
+}
+section .view-1 .button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+section .view-1 .button-container button {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: #0e0e0e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  border: 0.5px solid #343230;
+}
+section .view-1 .button-container img {
+  height: 1.2rem;
+  width: 1.2rem;
+  transform: rotate(180deg);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+section .view-1 .button-container p {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.view-2 {
+  width: 100%;
+  padding: 4rem 3rem;
+  display: flex;
+  justify-content: center;
+}
+.view-2 .marquee {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.view-2 .marquee::before {
+  content: "";
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  background-image: linear-gradient(to right, #0e0e0e, transparent);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.view-2 .marquee::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  right: 0;
+  background-image: linear-gradient(to left, #0e0e0e, transparent);
+}
+.view-2 .marquee .images {
+  display: flex;
+  gap: 3rem;
+  animation: marquee 10s linear infinite both;
+  padding: 0 1.5rem;
+}
+.view-2 .marquee .images img {
+  height: 2rem;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.view-3 {
+  padding: 0.5rem 2rem;
+}
+.view-3 .card-container {
+  gap: 1.2rem;
+  display: grid;
+  grid-template-areas: "a" "b" "c";
+}
+.view-3 .card-container .card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #343230;
+  padding: 2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 100;
+  background-color: #1c1a19;
+}
+.view-3 .card-container .card.a {
+  grid-area: a;
+}
+.view-3 .card-container .card.b {
+  grid-area: b;
+}
+.view-3 .card-container .card.c {
+  grid-area: c;
+}
+.view-3 .card-container .card .info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.view-3 .card-container .card .info-container .card-heading {
+  text-transform: uppercase;
+  font-size: 1.24rem;
+}
+.view-3 .card-container .card .info-container .card-content {
+  font-size: 1rem;
+  line-height: 1.8;
+  opacity: 0.7;
+}
+.view-3 .card-container .card .card-button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+.view-3 .card-container .card .card-button img {
+  width: 2rem;
+  border: 0.1px solid wheat;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+.view-3 .card-container .card .card-button p {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.view-4 {
+  padding: 2rem 2rem;
+}
+.view-4 .heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.view-4 .heading h1 {
+  font-size: 2rem;
+  font-weight: 100;
+  opacity: 0.8;
+}
+.view-4 .heading .select-container {
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+  gap: 1rem;
+}
+.view-4 .heading .select-container img {
+  width: 2rem;
+  border: 0.1px solid #343230;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+.view-4 .heading .select-container p {
+  font-weight: 1.5rem;
+  opacity: 0.6;
+}
+.view-4 .card-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-areas: "d" "e" "f" "g";
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+.view-4 .card-container .card {
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.view-4 .card-container .card.d {
+  grid-area: d;
+  background-image: url(./assests/container_1_.png);
+}
+.view-4 .card-container .card.e {
+  grid-area: e;
+  background-image: url(./assests/container-3.png);
+}
+.view-4 .card-container .card.f {
+  grid-area: f;
+  background-image: url(./assests/mobile_2.png);
+}
+.view-4 .card-container .card.g {
+  grid-area: g;
+  background-image: url(./assests/laptop_4.png);
+}
+.view-4 .card-container .card .card-button {
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+  margin: 0.8rem 1.5rem;
+  border: 1px solid #343230;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+.view-4 .card-container .card .card-button p {
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+
+.view-5 {
+  padding: 0rem 3rem;
+}
+.view-5 .heading {
+  font-size: 3.6rem;
+  text-align: center;
+  font-weight: 100;
+}
+.view-5 .heading i {
+  font-family: "Gambetta", serif;
+}
+.view-5 .p {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  line-height: 1.7rem;
+  text-align: center;
+  font-weight: 100;
+}
+.view-5 .client-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+.view-5 .client-container .client-card {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #181616;
+  border: 1px solid #343230;
+}
+.view-5 .client-container .client-card .logo {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.view-5 .client-container .client-card .info {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  text-align: left;
+}
+.view-5 .client-container .client-card .description {
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.4rem;
+}
+.view-5 .client-container .client-card .profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.view-5 .client-container .client-card .profile img {
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  fill: wheat;
+}
+.view-5 .client-container .client-card .profile .name {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+.view-5 .client-container .client-card .profile .place {
+  opacity: 0.7;
+  font-size: x-small;
+  font-weight: 100;
+}
+
+.view-6 .heading {
+  color: #dac5a7;
+}
+.view-6 .heading h1 {
+  margin: 1rem 0;
+  text-align: center;
+  font-weight: 300;
+  font-size: 4.5rem;
+  line-height: 1;
+}
+.view-6 .heading p {
+  font-size: 1.2rem;
+  font-weight: 100;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0 auto;
+}
+.view-6 .steps {
+  padding: 2rem;
+}
+.view-6 .steps img {
+  margin: 0 -2px;
+  width: 2.5rem;
+  border: 1px solid #302E2C;
+  border-radius: 50%;
+  transform: rotate(135deg);
+}
+.view-6 .steps .step {
+  display: flex;
+  gap: 1rem;
+  color: #dac5a7;
+}
+.view-6 .steps .step .timeline-design {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.view-6 .steps .step .timeline-design p {
+  padding: 0.5rem;
+  width: -moz-max-content;
+  width: max-content;
+  border: 2px solid #302E2C;
+  border-radius: 50%;
+}
+.view-6 .steps .step .timeline-design .line {
+  width: 0;
+  height: 10%;
+  border: 1px solid #302E2C;
+}
+.view-6 .steps .step .timeline-design .lower {
+  height: 100%;
+}
+.view-6 .steps .step .card {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border: 1px solid #302E2C;
+  gap: 1.5rem;
+}
+.view-6 .steps .step .card .time {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid #302E2C;
+  text-transform: uppercase;
+}
+.view-6 .steps .step .card .heading p:nth-child(1) {
+  text-transform: uppercase;
+}
+.view-6 .steps .step .card .heading p {
+  margin-bottom: 0;
+  text-align: left;
+  opacity: 0.6;
+}
+.view-6 .steps .step .card .heading h1 {
+  margin: -5px -2px;
+  text-align: left;
+  font-size: 2.2rem;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.view-6 .steps .step .card p, .view-6 .steps .step .card li {
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.6;
+  opacity: 1;
+}
+.view-6 .steps .step .card li {
+  margin: 0 1rem;
+}
+.view-6 .steps .step:nth-child(6) .lower {
+  display: none;
+}
+
+.view-7 .poster {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+}
+.view-7 .poster .banner {
+  display: flex;
+  flex-direction: column;
+}
+.view-7 .poster .banner .left {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 100;
+}
+.view-7 .poster .banner .portrait img {
+  margin: 1.5rem 0;
+  margin-left: 1rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.view-7 .poster .banner .right {
+  display: none;
+}
+
+.view-7 .part-2 {
+  padding: 0 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.view-7 .part-2 .left h1 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 100;
+}
+.view-7 .part-2 .right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.view-7 .part-2 .right P {
+  text-align: center;
+  font-weight: 100;
+  line-height: 1.8rem;
+  font-size: 1rem;
+}
+
+.view-8 {
+  margin-top: 5rem;
+  padding: 0.6rem;
+  width: 100%;
+  background-color: #22201e;
+  overflow: hidden;
+  display: flex;
+  justify-self: center;
+  border: 1px 1px 0 1px solid rgba(167, 125, 81, 0.912);
+}
+.view-8 .marquee-2 {
+  display: flex;
+  gap: 0 0.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 50%;
+  margin: auto;
+}
+.view-8 .marquee-2 .text {
+  display: flex;
+  gap: 4rem;
+  animation: marquee 10s linear infinite both;
+}
+
+.view-9 {
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.view-9 .heading {
+  font-weight: 100;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.view-9 h1 {
+  font-size: 3.5rem;
+  font-weight: 100;
+  text-align: center;
+}
+.view-9 h1 em {
+  font-family: "Gambetta", serif;
+}
+.view-9 .description {
+  font-size: 1.23rem;
+  line-height: 1.5rem;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.view-9 button {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.view-9 button a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  background-color: wheat;
+  color: #0e0e0e;
+  border: none;
+  padding: 2px 1rem;
+}
+.view-9 button a img {
+  width: 1.3rem;
+  height: 2rem;
+}
+
+.view-10 {
+  padding: 2rem;
+}
+.view-10 footer .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+.view-10 footer .logo img {
+  align-self: center;
+  padding: 7rem;
+}
+.view-10 footer .logo a {
+  text-decoration: none;
+  color: #dac5a7;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.view-10 footer .logo a img {
+  padding: 0.4rem;
+  width: 2.5rem;
+  border: 0.2px solid #dac5a7;
+  border-radius: 50%;
+  background-color: #343230;
+}
+.view-10 footer .logo a img:hover {
+  cursor: pointer;
+}
+.view-10 footer .pages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.view-10 footer .pages h1 {
+  padding-top: 2rem;
+  padding-bottom: 1.4rem;
+  font-weight: 100;
+}
+.view-10 footer .pages a {
+  text-decoration: none;
+  text-align: center;
+  color: #dac5a7;
+  opacity: 0.6;
+}
+.view-10 footer .pages button {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.view-10 footer .pages button a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  background-color: wheat;
+  color: #0e0e0e;
+  border: none;
+  padding: 2px 1rem;
+  opacity: 1;
+}
+.view-10 footer .pages button a img {
+  width: 1.3rem;
+  height: 2rem;
+}
+.view-10 footer .CMS {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.view-10 footer .CMS .h {
+  font-weight: 200;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+.view-10 footer .CMS a {
+  text-decoration: none;
+  color: #dac5a7;
+  text-align: center;
+  opacity: 0.6;
+}
+.view-10 footer .Utility-Pages {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.view-10 footer .Utility-Pages h1 {
+  font-weight: 100;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.view-10 footer .Utility-Pages a {
+  text-decoration: none;
+  color: #dac5a7;
+  text-align: center;
+  opacity: 0.6;
+}
+.view-10 .contact {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.view-10 .contact p {
+  font-weight: 200;
+  line-height: 0.5rem;
+}
+.view-10 .contact p a {
+  color: #d2c5b2;
+}
+.view-10 .contact span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.view-10 .contact span a {
+  border: 0.4px solid #343230;
+  border-radius: 50%;
+  margin: 1rem;
+  padding: 5px;
+}
+.view-10 .contact span a img {
+  width: 1rem;
+}
+
+@media (min-width: 1020px) {
+  html {
+    font-size: clamp(16px, 1vw, 20px);
+  }
+  section .view-1 img {
+    width: 28%;
+  }
+  section .view-1 h1 {
+    font-size: 8.5rem;
+  }
+  section .view-1 P {
+    font-size: 1.5rem;
+  }
+  section .view-1 P br {
+    display: block;
+  }
+  .view-2 .marquee {
+    width: 70%;
+  }
+  .view-3 {
+    padding: 0.5rem 6rem; /* More spacious padding */
+  }
+  .view-3 .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    grid-template-areas: "a b c"; /* Place items side by side */
+  }
+  .view-4 {
+    padding: 2rem;
+  }
+  .view-4 .card-container {
+    display: grid;
+    grid-template-areas: "d e" "f g";
+    grid-template-columns: 1fr 1fr;
+  }
+  .view-5 {
+    padding: 0 6rem;
+  }
+  .view-5 .client-container {
+    padding: 5rem;
+    grid-template-areas: "a d" "b e" "c f";
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .view-6 {
+    padding: 0rem;
+    position: relative;
+  }
+  .view-6 .timeline {
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    background: #fff;
+    height: 100%;
+    transform: translateX(-50%);
+  }
+  .view-6 .steps {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    gap: 2rem;
+    margin-left: 5rem;
+  }
+  .view-6 .steps .step {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    z-index: -1;
+  }
+  .view-6 .steps .step:nth-child(even) {
+    align-self: flex-end;
+    justify-content: flex-end;
+    margin-right: 5rem;
+  }
+  .view-6 .steps .step .card {
+    max-width: 400px;
+    padding: 1.5rem;
+    border: 1px solid #f1dab9;
+    background: #1a1a1a;
+    position: relative;
+  }
+  .view-6 .steps .step .card::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+  .view-6 .steps .step:nth-child(even) .card::before {
+    left: auto;
+    right: -15px;
+  }
+  .view-7 .poster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 13rem;
+  }
+  .view-7 .poster .banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+  }
+  .view-7 .poster .banner img {
+    display: none;
+  }
+  .view-7 .poster .banner .left {
+    margin-right: auto;
+    margin-left: -10rem;
+    opacity: 0.6;
+  }
+  .view-7 .poster .banner .right {
+    margin-left: auto;
+    margin-right: -5rem;
+    opacity: 0.9;
+    display: block;
+  }
+  .view-7 .poster .banner .name {
+    font-family: "Playfair Display", serif;
+    font-size: 5rem;
+    color: #d2c5b2;
+  }
+  .view-7 .poster .banner .portrait {
+    padding: 10rem;
+    background: url(./assests/image_1.png) center/cover no-repeat;
+    width: 20rem;
+    height: 25rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  .view-7 .part-2 {
+    margin-top: 17rem;
+    padding-top: 3rem;
+  }
+  .view-7 .part-2 .flex {
+    display: flex;
+    gap: 1rem;
+  }
+  .view-7 .part-2 .flex .left {
+    width: 50%;
+  }
+  .view-7 .part-2 .flex .left h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: 100;
+  }
+  .view-7 .part-2 .flex .right {
+    width: 50%;
+  }
+  .view-7 .part-2 .flex .right P {
+    text-align: center;
+    font-weight: 100;
+    line-height: 2.2rem;
+    font-size: 1rem;
+  }
+  .view-8 .marquee-2 {
+    width: 80%;
+  }
+  .view-9 button {
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .view-9 button a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    background-color: wheat;
+    color: #0e0e0e;
+    border: none;
+    padding: 2px 1.2rem;
+  }
+  .view-9 button a img {
+    width: 1.3rem;
+    height: 2rem;
+  }
+  .view-10 {
+    width: 100%;
+  }
+  .view-10 footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  .view-10 footer .logo {
+    margin-top: 10rem;
+  }
+  .view-10 footer .logo img {
+    padding: 0;
+    width: 5rem;
+    margin-bottom: 10px;
+  }
+  .view-10 footer .pages {
+    margin-top: 12rem;
+  }
+  .view-10 footer .CMS {
+    margin-top: 5rem;
+    margin-left: -10rem;
+  }
+  .view-10 .contact span {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

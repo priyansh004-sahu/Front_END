@@ -1,0 +1,468 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  font-family: sans-serif;
+  background-color: #fdfbf5;
+}
+
+main {
+  height: 100%;
+  margin: 0.9rem;
+  border: 1px solid black;
+  padding: 1.5rem;
+}
+main nav {
+  padding-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+main nav .left {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+main nav .left .svg {
+  margin-top: 1rem;
+}
+main nav .left img {
+  width: 50px;
+  height: auto;
+}
+main nav .right {
+  margin-right: 1rem;
+}
+main nav .right img {
+  padding: 4px 0;
+  padding-right: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+main .view-1 {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main .view-1 p {
+  font-size: 1.2rem;
+  font-weight: 200;
+  opacity: 0.8;
+}
+main .view-1 h1 {
+  font-weight: 300;
+  font-size: 3.9rem;
+  line-height: 3.5rem;
+  width: 70%;
+  padding-bottom: 1rem;
+}
+main .view-1 img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+}
+main .view-2 {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+main .view-2 .top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .view-2 .top p {
+  font-weight: 200;
+  opacity: 0.8;
+}
+main .view-2 .top h1 {
+  font-weight: 400;
+  font-size: 3rem;
+  width: 90%;
+}
+main .view-2 .top button {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  border: 0.7rem;
+  border-radius: 0.5rem;
+  background-color: black;
+  color: rgb(223, 182, 105);
+}
+main .view-2 .line {
+  background-color: black;
+  height: 1px;
+}
+main .view-2 .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .view-2 .bottom .elem {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view-2 .bottom .elem svg {
+  width: 4rem;
+  aspect-ratio: 1/1;
+}
+main .view-2 .bottom .elem h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+main .view-2 .bottom .elem p {
+  font-weight: 300;
+  opacity: 0.8;
+}
+main .view-3 {
+  width: 100%;
+}
+main .view-3 .top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+main .view-3 .top h2 {
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+main .view-3 .top p {
+  line-height: 2.2rem;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+main .view-3 .top .line {
+  height: 1px;
+  background-color: black;
+}
+main .view-3 .bottom-video {
+  width: 100%;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .view-3 .bottom-video .video {
+  width: 100%;
+}
+main .view-3 .bottom-video .video video {
+  width: 100%;
+  max-width: 25rem;
+  border-radius: 1.2rem;
+}
+main .view-3 .bottom-video .video h1 {
+  font-weight: 300;
+  line-height: 3rem;
+}
+main .view-3 .bottom-video .video .line {
+  margin-top: 1rem;
+  background-color: black;
+  height: 1px;
+}
+main .view-4 {
+  margin-top: 1.4rem;
+}
+main .view-4 .left {
+  margin-top: 1rem;
+}
+main .view-4 .left p {
+  padding-top: 2rem;
+  font-weight: 200;
+  opacity: 0.8;
+}
+main .view-4 .left h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+main .view-4 .right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view-4 .right p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+main .view-4 .right button {
+  width: 10rem;
+  padding: 0.3rem 1rem;
+  margin-top: 1rem;
+  background-color: black;
+  border-radius: 10px;
+  color: rgb(191, 154, 84);
+}
+main .view-4 .right .line {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+main .view-5 {
+  padding-top: 3rem;
+}
+main .view-5 .logo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view-5 .logo .svg {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main .view-5 .logo .address {
+  display: flex;
+  flex-direction: column;
+}
+main .view-5 .logo .address p {
+  font-weight: 100;
+  font-size: 1rem;
+}
+main .view-5 .logo .address .button {
+  padding-top: 4rem;
+  gap: 1rem;
+}
+main .view-5 .logo .address .button .bt {
+  margin: 4px;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 7px;
+}
+main .view-5 .logo .address .button .bt:hover {
+  background-color: black;
+  color: white;
+}
+main .view-5 .line {
+  width: 100%;
+  background-color: black;
+  height: 1px;
+  margin-top: 2rem;
+  opacity: 0.5;
+}
+main .view-5 .pages {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+main .view-5 .pages h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+main .view-5 .pages a {
+  text-decoration: none;
+  color: black;
+  font-weight: 100;
+}
+main .view-5 .pages a:hover {
+  text-decoration: underline;
+}
+main .view-5 .pages .bt {
+  width: 10rem;
+  padding: 0.3rem 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+main .view-5 .line {
+  width: 100%;
+  background-color: black;
+  height: 1px;
+  margin-top: 2rem;
+  opacity: 0.5;
+}
+main footer {
+  text-align: center;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+main footer p {
+  padding: 0.5rem;
+}
+main footer p .a {
+  text-decoration: underline;
+}
+
+@media (min-width: 1020px) {
+  main {
+    padding: 3rem;
+    height: 90%;
+  }
+  main .view-1 h1 {
+    font-size: 8rem;
+    width: 100%;
+    line-height: 7rem;
+  }
+  main .view-1 img {
+    height: 35rem;
+  }
+  main .view-2 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+  }
+  main .view-2 .top {
+    width: 60%;
+    justify-content: space-between;
+  }
+  main .view-2 .top h1 {
+    font-size: 3rem;
+    width: 80%;
+  }
+  main .view-2 .line {
+    height: initial;
+    width: 1px;
+  }
+  main .view-2 .bottom {
+    width: 40%;
+  }
+  main .view-2 .bottom .line {
+    height: 1px;
+    width: 100%;
+    align-self: stretch;
+  }
+  main .line {
+    background-color: black;
+    height: 1px;
+  }
+  main .view-3 {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 1rem;
+    background-color: #f8f6f2;
+  }
+  main .view-3 .top {
+    text-align: left;
+    max-width: 400px;
+    position: sticky;
+    top: 0;
+  }
+  main .view-3 .top h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  main .view-3 .top p {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  main .view-3 .top .line {
+    display: none;
+  }
+  main .view-3 .line {
+    width: 1px;
+    height: 34rem;
+    background-color: black;
+  }
+  main .view-3 .bottom-video {
+    flex: 2;
+    display: grid;
+    padding-left: 0.9rem;
+    grid-template-columns: repeat(2, 3fr);
+    gap: 1rem;
+  }
+  main .view-3 .bottom-video .video {
+    border-radius: 1rem;
+  }
+  main .view-3 .bottom-video .video video {
+    width: 100%;
+    border-radius: 0.8rem;
+  }
+  main .view-3 .bottom-video .video h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+  main .view-3 .bottom-video .video h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: gray;
+  }
+  main .view-3 .bottom-video .video .line {
+    display: none;
+  }
+  main .line {
+    margin-top: 1rem;
+    background-color: black;
+    height: 1px;
+  }
+  main .view-4 {
+    display: flex;
+    flex-direction: row;
+  }
+  main .view-4 .left {
+    width: 90%;
+    padding-right: 0.8rem;
+  }
+  main .view-4 .left h1 {
+    font-size: 4.5rem;
+  }
+  main .view-4 .line {
+    width: 1px;
+    height: 36rem;
+    background-color: black;
+  }
+  main .view-4 .right {
+    width: 40%;
+    padding: 1.7rem;
+  }
+  main .view-4 .right p {
+    font-size: 1.1rem;
+  }
+  main .view-4 .right button {
+    width: 10rem;
+    padding: 0.7;
+    margin-top: 25rem;
+    border-radius: 5px;
+    color: white;
+  }
+  main .view-4 .right .line {
+    display: none;
+  }
+  main .line {
+    margin-top: 1rem;
+    background-color: black;
+    height: 1px;
+  }
+  main .view-5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main .view-5 .line-2 {
+    margin-left: 10rem;
+    width: 1px;
+    background-color: black;
+  }
+  main .view-5 .line {
+    display: none;
+  }
+  main .line-b {
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    margin-top: 4rem;
+  }
+  main footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main footer .b {
+    padding: 1rem;
+  }
+}/*# sourceMappingURL=style.css.map */

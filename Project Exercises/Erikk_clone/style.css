@@ -1,0 +1,548 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main {
+  width: 100%;
+  padding: 1.5em;
+  padding-top: 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .view-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .view-1 img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .view-1 .text {
+  display: flex;
+  justify-content: space-between;
+  font-family: monospace;
+}
+main .image-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .image-text .top {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+main .image-text .top img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .image-text .bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .image-text .bottom h1 {
+  font-size: 3em;
+  font-weight: 400;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+main .image-text .bottom .p {
+  font-size: 1.5em;
+  font-weight: 200;
+  font-family: monospace;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+main .image-text .bottom .services {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
+main .image-text .bottom .services .service {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+main .image-text .bottom .services .service p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.7em;
+  font-weight: 376;
+  text-transform: uppercase;
+}
+main .vertical-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .vertical-text .top {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+main .vertical-text .top img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .vertical-text .bottom {
+  display: flex;
+  gap: 1em;
+}
+main .vertical-text .bottom p {
+  writing-mode: vertical-rl;
+  padding-top: 0.5em;
+}
+main .vertical-text .bottom .text h1 {
+  font-size: 3em;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1;
+}
+main .vertical-text .bottom .text p {
+  writing-mode: initial;
+  line-height: 1.5;
+  font-size: 1.6em;
+  font-family: monospace;
+  opacity: 0.6;
+}
+main .our-services {
+  padding-block: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .our-services .top h1 {
+  font-size: 3em;
+  font-weight: 400;
+}
+main .our-services .top .services-grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+main .our-services .top .services-grid .text {
+  padding: 1rem;
+}
+main .our-services .top .services-grid .text h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+main .our-services .top .services-grid .text p {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  opacity: 0.6;
+}
+main .our-services .bt-head {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding-top: 2em;
+}
+main .our-services .bt-head img {
+  width: 3rem;
+  background-color: black;
+  border-radius: 50%;
+  padding: 0.6em;
+}
+main .our-services .bt-head p {
+  opacity: 1;
+  text-transform: uppercase;
+  margin-bottom: 1.3rem;
+}
+main .our-services .bottom {
+  width: 100%;
+}
+main .our-services .bottom .img {
+  width: 100%;
+}
+main .our-services .bottom .img img {
+  width: 100%;
+}
+main .selected-work {
+  padding-top: 3rem;
+  border-top: 1.2px solid rgba(128, 128, 128, 0.244);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+main .selected-work img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -o-object-fit: cover;
+}
+main .selected-work .select-box {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+main .selected-work .select-box .img-a {
+  display: none;
+}
+main .selected-work .select-box .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+main .selected-work .select-box .text div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+main .selected-work .select-box .text div h4 {
+  font-size: 2.5em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+main .selected-work .select-box .text div p {
+  font-family: monospace;
+  font-size: 1.5em;
+}
+main .selected-work .select-box .text .img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+main .selected-work .select-box .text .img a {
+  background-color: black;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 50%;
+}
+main .selected-work .select-box .text .img a img {
+  width: 2rem;
+}
+main .selected-work .select-box .text p {
+  text-transform: uppercase;
+}
+main .clients {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .clients .img-client {
+  width: 100%;
+}
+main .clients .img-client img {
+  width: 100%;
+}
+main .clients .client-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+main .clients .client-card p {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+main .clients .client-card h1 {
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+main .Team .heading {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .Team .heading h1 {
+  font-size: 3.3em;
+  font-weight: 400;
+}
+main .Team .heading p {
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1.5;
+  font-family: monospace;
+}
+main .Team .team_card {
+  width: 100%;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .Team .team_card h2 {
+  text-transform: uppercase;
+  font-size: 1.8em;
+  font-weight: 400;
+}
+main .Team .team_card .img {
+  width: 100%;
+}
+main .Team .team_card .img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .Team .team_card .team_logo {
+  display: flex;
+  justify-content: space-between;
+}
+main .Team .team_card .team_logo .logo span {
+  padding: 0px 2px;
+}
+@media (min-width: 900px) {
+  main {
+    padding: 4rem;
+    gap: 4rem;
+    /* Our Services Section */
+  }
+  main .image-text {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 3em;
+  }
+  main .image-text .bottom h1 {
+    font-size: 4.7em;
+    letter-spacing: 0.005em;
+  }
+  main .image-text .bottom .p {
+    font-size: 1.8em;
+    width: 90%;
+  }
+  main .image-text .bottom .services {
+    margin-top: auto;
+    padding: 1rem;
+    padding-bottom: 2rem;
+  }
+  main .image-text .bottom .services .service p {
+    font-size: 2em;
+  }
+  main .vertical-text {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+  }
+  main .vertical-text .top {
+    width: 30%;
+  }
+  main .vertical-text .bottom {
+    width: 70%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  main .vertical-text .bottom .text {
+    display: flex;
+    flex-direction: column;
+  }
+  main .vertical-text .bottom .text h1 {
+    font-size: 6.5em;
+  }
+  main .vertical-text .bottom .text p {
+    margin-top: 5em;
+    padding: 1em;
+  }
+  main .our-services {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  main .our-services .top {
+    width: 50%;
+  }
+  main .our-services .top h1 {
+    font-size: 5.8rem;
+    line-height: 0.9;
+    padding-bottom: 3rem;
+    font-weight: 375;
+  }
+  main .our-services .top .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main .our-services .top .services-grid .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  main .our-services .top .services-grid .text h2 {
+    font-size: 2rem;
+  }
+  main .our-services .top .services-grid .text p {
+    font-size: 1rem;
+  }
+  main .our-services .top .services-grid .text .bt-head {
+    display: flex;
+    align-items: center;
+  }
+  main .our-services .top .services-grid .text .bt-head img {
+    width: 2.3rem;
+  }
+  main .our-services .bottom {
+    width: 48%;
+  }
+  main .our-services .bottom .img {
+    width: 100%;
+  }
+  main .our-services .bottom .img img {
+    width: 100%;
+    height: 53rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main .selected-work {
+    width: 100%;
+  }
+  main .selected-work .row-box {
+    flex-direction: row;
+  }
+  main .selected-work .row-box .image {
+    width: 80%;
+  }
+  main .selected-work .row-box .img-a {
+    display: block;
+  }
+  main .selected-work .row-box .text {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  main .selected-work .row-box .text div {
+    width: 80%;
+    padding-bottom: 2rem;
+  }
+  main .selected-work .row-box .text div h4 {
+    font-size: 4rem;
+  }
+  main .selected-work .row-box .text div p {
+    font-size: 1rem;
+  }
+  main .selected-work .reverse-box {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  main .selected-work .reverse-box .image {
+    width: 100%;
+  }
+  main .selected-work .reverse-box .img-a {
+    display: block;
+    width: 100%;
+  }
+  main .selected-work .reverse-box .text {
+    width: 83%;
+    display: flex;
+    justify-content: space-between;
+  }
+  main .selected-work .reverse-box .text div {
+    width: 80%;
+  }
+  main .selected-work .reverse-box .text div h4 {
+    font-size: 4rem;
+  }
+  main .selected-work .reverse-box .text div p {
+    font-size: 1rem;
+  }
+  main .clients {
+    align-items: end;
+  }
+  main .clients .img-client {
+    width: 30%;
+  }
+  main .clients .client-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    gap: 2rem;
+  }
+  main .clients .client-card h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    flex: 1;
+  }
+  main .clients .client-card .brand {
+    display: flex;
+    width: 10%;
+    opacity: 0.8;
+    font-size: 0.8em;
+  }
+  main .clients hr {
+    display: none;
+  }
+  main .clients .line {
+    width: 70%;
+    background-color: black;
+    height: 0.5px;
+    margin-top: -1em;
+    opacity: 0.2;
+  }
+  main .Team {
+    width: 100%;
+    flex-direction: row;
+  }
+  main .Team .heading {
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+  }
+  main .Team .heading h1 {
+    width: 50%;
+    font-size: 6em;
+  }
+  main .Team .heading .p {
+    padding-top: 1em;
+    font-size: 1.3em;
+    width: 50%;
+    line-height: 1.4;
+  }
+  main .Team .main_team {
+    padding-top: 4em;
+    display: flex;
+    gap: 2rem;
+  }
+  main .Team .main_team .team_card {
+    width: 100%;
+  }
+  main .Team .main_team .team_card h2 {
+    font-size: 1em;
+  }
+  main .Team .main_team .team_card .team_logo {
+    align-items: center;
+  }
+  main .Team .main_team .team_card .team_logo p {
+    font-size: 0.7em;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  main .Team .main_team .team_card .heading {
+    padding-top: 1em;
+    width: 100%;
+  }
+  main .Team .main_team .team_card .heading p {
+    font-size: 1em;
+    opacity: 0.3;
+    width: 100%;
+    line-height: 1.4;
+  }
+}/*# sourceMappingURL=style.css.map */

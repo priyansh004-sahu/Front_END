@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main {
+  padding: 1.5rem 1.5rem 0rem 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+nav .right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+nav .right .p {
+  font-weight: 200;
+}
+nav .right button {
+  border: 1px solid beige;
+  background-color: black;
+  color: whitesmoke;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.view-1 {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.view-1 .top {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.view-1 .top h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.view-1 .top h1 span {
+  opacity: 0.6;
+}
+.view-1 .top p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.view-1 .bottom {
+  width: 100%;
+  max-height: 20rem;
+  aspect-ratio: 1/1;
+}
+.view-1 .bottom .image {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "a a b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a c c" "a a c c" "a a c c";
+  gap: 1.3rem;
+  max-height: 30rem;
+}
+.view-1 .bottom .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+}
+.view-1 .bottom .image .img-a {
+  grid-area: a;
+}
+.view-1 .bottom .image .img-b {
+  grid-area: b;
+  aspect-ratio: 3/4;
+}
+.view-1 .bottom .image .img-c {
+  grid-area: c;
+  aspect-ratio: 16/9;
+}
+.view-1 button {
+  margin: 4rem 5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: grey;
+  color: white;
+}
+
+.view-2 {
+  width: 100%;
+}
+.view-2 .top h1 {
+  font-size: 3rem;
+}
+.view-2 .top p {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.view-2 .scroll {
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  margin-top: 2rem;
+}
+.view-2 .scroll .card {
+  min-width: 20rem;
+  height: 25rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.view-2 .scroll .card img {
+  width: 100%;
+  height: 20rem;
+  border-radius: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.view-2 .scroll .card .name P {
+  font-size: 1.2rem;
+}
+
+.view-3 {
+  width: 100%;
+  padding-top: 2rem;
+}
+.view-3 .top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.view-3 .bottom {
+  padding-top: 1rem;
+}
+.view-3 .bottom .head {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.view-3 .bottom .head .div {
+  display: flex;
+  gap: 1rem;
+}
+.view-3 .bottom .head .div .image {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+.view-3 .bottom .head .div .image img {
+  width: 100%;
+  border-radius: 1rem;
+}
+.view-3 .bottom .head .div .heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.view-4 {
+  width: 100%;
+  background-color: #808080;
+  margin-top: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: calc(100% + 3rem); /* Add back the removed padding */
+  margin-left: -1.5rem;
+}
+.view-4 h1 {
+  padding-top: 5rem;
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: 500;
+}
+.view-4 .input {
+  padding-bottom: 3rem;
+  gap: 1rem;
+}
+.view-4 .input input {
+  border-radius: 1rem;
+  border: 1px solid black;
+  padding: 0.4rem 2rem;
+}
+.view-4 .input button {
+  padding: 0.5rem;
+  border: 1px solid black;
+  background-color: #808080;
+  border-radius: 1rem;
+}
+
+footer {
+  width: calc(100% + 3rem); /* Add back the removed padding */
+  margin-left: -1.5rem;
+  background-color: #808080;
+  margin-top: 2rem;
+  color: white;
+  padding: 3rem 1.5rem;
+  font-family: Arial, sans-serif;
+}
+footer .footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+footer .footer-container .footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 1rem;
+}
+footer .footer-container .footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+footer .footer-container .footer-section ul {
+  list-style: none;
+}
+footer .footer-container .footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+footer .footer-container .footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+}
+footer .footer-container .footer-section ul li a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+footer .footer-container .logo h2 {
+  font-size: 1.5rem;
+}
+footer .footer-container .logo .social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 0.5rem;
+  margin-left: 3rem;
+}
+footer .footer-container .logo .social-icons i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  width: calc(100% + 3rem); /* Add back the removed padding */
+  margin-left: -1.5rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-top: 3rem;
+  border-top: 1px solid white;
+  font-size: 0.9rem;
+  padding: 2rem;
+}
+
+@media (min-width: 1020px) {
+  main {
+    padding: 3rem 3rem 0rem 3rem;
+  }
+  .view-1 {
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .view-1 .top {
+    width: 50%;
+  }
+  .view-1 .top h1 {
+    font-size: 3rem;
+  }
+  .view-1 .top p {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+  .view-1 .bottom {
+    width: 50%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .view-1 .bottom .image {
+    max-width: 50rem;
+    grid-template-areas: ". . b b" "a a b b" "a a b b" "a a b b" "a a . ." "a a c c" "a a c c" ". . c c";
+  }
+  .view-1 button {
+    display: none;
+  }
+  .view-2 {
+    margin-top: 15rem;
+  }
+  .view-2 .scroll {
+    width: 100%;
+  }
+  .view-2 .scroll .card {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-width: 10rem;
+    height: 25rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+  .view-2 .scroll .card img {
+    width: 100%;
+    height: 15rem;
+    border-radius: 1rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding: 0;
+  }
+  .view-3 {
+    display: flex;
+    margin-top: -6rem;
+  }
+  .view-3 .top {
+    width: 50%;
+    gap: 1rem;
+  }
+  .view-3 .top h1 {
+    font-size: 3rem;
+  }
+  .view-3 .top img {
+    width: 93%;
+    border-radius: 1rem;
+  }
+  .view-3 .bottom {
+    margin-top: 3rem;
+    width: 50%;
+  }
+  .view-3 .bottom .head {
+    width: 100%;
+  }
+  .view-3 .bottom .head .image img {
+    width: 90%;
+  }
+  .view-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: calc(100% + 6rem); /* Add back the removed padding */
+    margin-left: -3rem;
+  }
+  .view-4 h1 {
+    font-size: 4rem;
+    color: white;
+  }
+  .view-4 .input button {
+    background-color: rgba(0, 0, 0, 0.52);
+    padding: 0.5rem 2rem;
+  }
+  footer {
+    width: calc(100% + 6rem); /* Add back the removed padding */
+    margin-left: -3rem;
+  }
+  footer .footer-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-bottom {
+    width: calc(100% + 6rem); /* Add back the removed padding */
+    margin-left: -3rem;
+  }
+}/*# sourceMappingURL=style.css.map */

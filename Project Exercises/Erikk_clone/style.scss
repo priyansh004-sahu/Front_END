@@ -1,0 +1,649 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+html{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+main{
+    width: 100%;
+    padding: 1.5em;
+    padding-top: 4em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    .view-1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+   
+        img{
+             width: 100%;
+             object-fit: cover;
+        }
+   
+        .text{
+            display: flex;
+            justify-content: space-between;
+            font-family: monospace;
+        }
+   }
+
+   .image-text{
+       width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+       .top{
+        width: 100%;
+         aspect-ratio: 1/1;
+        img{
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+        }
+       }
+
+       .bottom{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+          h1{
+              font-size: 3em;
+              font-weight: 400;
+              line-height: 0.9;
+              text-transform: uppercase;
+          }
+
+          .p{
+            font-size: 1.5em;
+            font-weight: 200;
+            font-family: monospace;
+            line-height: 1.5;
+            opacity: 0.8;
+          }
+
+          .services{
+              display: flex;
+              flex-direction: column;
+              gap: 1em;
+              width: 100%;
+
+              .service{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                p{
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-size: 1.7em;
+                    font-weight: 376;
+                    text-transform: uppercase;
+                }
+              }
+          }
+       }
+   }
+
+   .vertical-text{
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       gap: 1em;
+
+       .top{
+        width: 100%;
+        aspect-ratio: 1/1;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+       }
+
+       .bottom{
+        display: flex;
+        gap: 1em;
+
+        p{
+            writing-mode: vertical-rl;
+            padding-top: 0.5em;
+        }
+        .text{
+            h1{
+                font-size: 3em;
+                font-weight: 400;      
+                text-transform: uppercase;  
+                line-height: 1;
+             }
+            p{
+                writing-mode: initial;
+                line-height: 1.5;
+                font-size: 1.6em;
+                font-family: monospace;
+                opacity: 0.6;
+            }
+        }
+       }
+   }
+
+   .our-services{
+    padding-block: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .top{
+    
+        h1{
+            font-size: 3em;
+            font-weight: 400;
+        }
+        .services-grid{
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+
+            .text{
+                 padding: 1rem;
+
+                 h2{
+                    font-size: 2rem;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                 }
+                 p{
+                    font-size: 1.2rem;
+                    margin-top: 2rem;
+                    opacity: 0.6;
+                 }
+            }
+        }
+    }
+       
+    .bt-head{
+         display: flex;
+         align-items: center;
+        gap: 1em;
+        padding-top: 2em;
+
+      img{
+          width: 3rem;
+          background-color: black;
+          border-radius: 50%;
+          padding: 0.6em;
+      }
+      p{
+          opacity: 1;
+          text-transform: uppercase;
+            margin-bottom: 1.3rem;
+    }
+  }
+    .bottom{
+        width: 100%;
+
+        .img{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+  .selected-work{
+    padding-top: 3rem;
+    border-top: 1.2px solid rgba(128, 128, 128, 0.244);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    img{
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        -o-object-fit: cover;
+    }
+    .select-box{
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+          .img-a{
+             display: none;
+          }
+        .text {
+             display: flex;
+             flex-direction: column;
+             gap: 1.3rem;
+            div{
+                display: flex;
+                flex-direction: column;
+                gap: 0.5em;
+                
+                h4{
+                    font-size: 2.5em;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                }
+                p{
+                    font-family: monospace;
+                    font-size: 1.5em;
+                }
+    
+                
+            }
+
+            .img{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem;
+                a{
+                    background-color: black;
+                    width: fit-content;
+                    border-radius: 50%;
+                
+                    img{
+                        width: 2rem;
+                    }
+                  
+                }
+            }
+            p{
+                text-transform: uppercase;
+            }
+        }
+         
+        
+    }
+  }
+  
+  .clients{
+    width: 100%; 
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+      
+        .img-client{
+             width: 100%;
+
+                img{
+                width: 100%;
+             }
+    }
+    .client-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+
+        p{
+            font-size: 1em;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        h1{
+           font-size: 2em;
+          text-transform: uppercase;
+          font-weight: 400;
+        }
+    }
+  }
+  
+  .Team{
+      .heading{
+         display: flex;
+         flex-direction: column;
+          gap: 1rem;
+
+          h1{
+            font-size: 3.3em;
+            font-weight: 400;
+          }
+          p{
+            font-size: 1.5em;
+            font-weight: 300;
+            line-height: 1.5;
+            font-family: monospace;
+          }
+      }
+
+    .team_card {
+        width: 100%;
+         padding-top: 1rem;
+         display: flex;
+         flex-direction: column;
+         gap: 1em;
+         h2{
+            text-transform: uppercase;
+            font-size: 1.8em;
+            font-weight: 400;
+         }
+        .img{
+            width: 100%;
+            img{
+                width: 100%;
+                 object-fit: cover;
+            }
+        }
+        .team_logo{
+            display: flex;
+            justify-content: space-between;
+            .logo{
+              span{
+                     padding: 0px 2px;
+
+              }
+            }
+        }
+    }
+  }
+  .right_side{
+    
+  }
+}
+
+
+@media (min-width: 900px) {
+    main {
+        padding: 4rem;
+        gap: 4rem;
+
+        .image-text {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 3em;
+
+            .bottom {
+                h1 {
+                    font-size: 4.7em;
+                    letter-spacing: 0.005em;
+                }
+
+                .p {
+                    font-size: 1.8em;
+                    width: 90%;
+                }
+
+                .services {
+                    margin-top: auto;
+                    padding: 1rem;
+                    padding-bottom: 2rem;
+
+                    .service {
+                        p {
+                            font-size: 2em;
+                        }
+                    }
+                }
+            }
+        }
+
+        .vertical-text {
+            display: flex;
+            flex-direction: row;
+            gap: 4em;
+
+            .top {
+                width: 30%;
+            }
+
+            .bottom {
+                width: 70%;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+
+                    h1 {
+                        font-size: 6.5em;
+                    }
+
+                    p {
+                        margin-top: 5em;
+                        padding: 1em;
+                    }
+                }
+            }
+        }
+
+        /* Our Services Section */
+        .our-services {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+
+            .top {
+                width: 50%;
+                
+              h1{
+                font-size: 5.8rem;
+                line-height: 0.9;
+                padding-bottom: 3rem;
+                font-weight: 375;
+              }
+                .services-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr); // Two columns
+                   
+
+                    .text {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        h2{
+                            font-size: 2rem;
+                        }
+                        p{
+                            font-size: 1rem;
+                        }
+
+                        .bt-head{
+                            display: flex;
+                            align-items: center;
+                            img{
+                                width: 2.3rem;
+                            }
+                        }
+                       
+                    }
+                }
+            }
+
+            .bottom {
+                width: 48%;
+
+                .img {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 53rem;
+                        object-fit: cover;
+                        
+                    }
+                }
+            }
+        }
+
+        .selected-work{
+                 width: 100%;
+                 
+              
+            .row-box{
+                flex-direction: row;
+               
+                .image{
+                    width: 80%;
+                }
+                .img-a{
+                    display: block;
+                
+                }
+
+                .text{
+                    width: 90%;
+                    display: flex;
+                    justify-content: space-between;
+                    div {
+                        width: 80%  ;
+                        padding-bottom: 2rem;
+                    h4{
+                        font-size: 4rem;                        
+                    }
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+                }
+            }
+
+            .reverse-box{
+                display: flex;
+                flex-direction: row-reverse;
+
+                .image{
+                    width: 100%;
+                }
+                .img-a{
+                    display: block;
+                   width: 100%;
+                //    object-fit: contain;  
+                }
+
+                .text{
+                    width: 83%;
+                    display: flex;
+                    justify-content: space-between;
+                   
+
+                    div {
+                        width: 80%  ;
+                    h4{
+                        font-size: 4rem;                        
+                    }
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+                }
+
+            }
+        }
+
+        .clients{
+            align-items: end;    
+          
+            .img-client{
+                width: 30%;
+          }
+            .client-card{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                
+                width: 70%;
+                gap: 2rem;
+
+                h1 {
+                    font-size: 2rem;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    flex: 1;
+                }
+                .brand{
+                    display: flex;
+                    width: 10%;
+                    opacity: 0.8;      
+                    font-size: 0.8em;            
+                }
+               
+            }
+
+          
+            hr{
+                display: none;
+            }
+            .line{
+                width: 70%;
+                background-color: black;
+                height: 0.5px;
+                margin-top: -1em;
+                opacity: 0.2;
+            }
+
+        }
+       
+        .Team{
+           width: 100%;
+           flex-direction: row;
+            .heading{
+                flex-direction: row;
+                width: 100%;
+                align-items: center;
+               h1{
+                    width: 50%;
+                    font-size: 6em;
+                }
+                .p{
+                    padding-top: 1em;
+                    font-size: 1.3em;
+                    width: 50%;
+                   line-height: 1.4;
+                }
+               
+            }
+            .main_team{
+                padding-top: 4em;
+                display: flex;
+                gap: 2rem;
+                
+
+                .team_card{
+                    width: 100%;
+
+                    h2{
+                        font-size: 1em;
+                    
+                    }
+                    .team_logo{
+                        align-items: center;
+                        p{
+                            font-size: 0.7em;
+                            text-transform: uppercase;
+                            font-weight: 400;
+                        }
+                    }
+                    .heading{
+                        padding-top: 1em;
+                        width: 100%;
+                        p{
+                            font-size: 1em;
+                            opacity: 0.3;
+                            width: 100%;
+                            line-height: 1.4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
