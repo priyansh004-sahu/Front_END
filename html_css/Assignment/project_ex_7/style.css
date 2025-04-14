@@ -1,0 +1,34 @@
+.scroll {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  border-left: none;
+  border-right: none;
+}
+.scroll .marquee {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.scroll .marquee .text {
+  display: flex;
+  gap: 4rem;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite both;
+  padding: 0 1.5rem;
+}
+.scroll .marquee .text P {
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Light & Dark Mode</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      transition: background 0.3s, color 0.3s;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .light-mode {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    .toggle-btn {
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" id="toggleModeBtn">Toggle Mode</button>
+
+
+  <script>
+    const body = document.body;
+    const toggleBtn = document.getElementById("toggleModeBtn");
+
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      body.classList.add(savedTheme);
+    } else {
+      // Default theme
+      body.classList.add("light-mode");
+    }
+
+    // Toggle and save to localStorage
+    toggleBtn.addEventListener("click", () => {
+      if (body.classList.contains("light-mode")) {
+        body.classList.replace("light-mode", "dark-mode");
+        localStorage.setItem("theme", "dark-mode");
+      } else {
+        body.classList.replace("dark-mode", "light-mode");
+        localStorage.setItem("theme", "light-mode");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            color: beige;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: aquamarine;
+            border-radius: 5px;
+            border: none;
+            position: relative;
+            z-index: 8;
+        }
+
+        button:active {
+            scale: 0.95;
+        }
+        .image{
+            height: 200px;
+            position: absolute;
+        }
+        #box{
+            width: 400px;
+            height: 400px;
+            background-color: lightpink;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Create an Element</button>
+    <div id="box"></div>
+
+    <script>
+
+        var btn = document.querySelector('button')
+        var body = document.querySelector('body')
+
+        btn.addEventListener('click', function () {
+
+            var x = Math.floor(Math.random()* 80);
+            var y = Math.floor(Math.random()* 80);
+            var rot = Math.floor(Math.random()* 360);
+
+            var img = document.createElement('img')
+            img.setAttribute('src', 'cartton.png')
+            
+            img.setAttribute('class', 'image')
+
+            img.style.left = x + '%';
+            img.style.top = y + '%';
+            img.style.rotate = rot + 'deg';
+
+            body.appendChild(img)
+        })
+
+         
+        var box = document.querySelector('#box')
+        
+         box.addEventListener('wheel', function(dets) {
+            console.log('Event Performed');
+            console.log(dets);
+            
+        })
+       
+        
+
+    </script>
+</body>
+
+</html>
+
+<!-- 
+// dblclick
+// mouseenter
+// mouseleave
+// mousemove
+// scroll
+//  wheel -->

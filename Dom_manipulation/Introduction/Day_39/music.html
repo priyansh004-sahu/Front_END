@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Bar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            color: black;
+        }
+
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url( https://images.unsplash.com/photo-1567360425618-1594206637d2?q=80&w=2068&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;  /* Fix: Ensures the image covers the whole background */
+    background-position: center; /* Centers the image properly */
+    background-repeat: no-repeat; /* Prevents repeating */
+    color: white;
+}
+
+    </style>
+</head>
+
+<body class="h-screen">
+    <div class="bg-white/10 backdrop-blur-lg border border-white/20 px-6 py-4 rounded-xl shadow-xl text-center">
+        <div id="progress" class="w-80 bg-gray-300 rounded-full h-4 overflow-hidden">
+              <div id="growth" class="bg-blue-500 rounded-full h-full w-0 transition-all duration-300"></div>
+        </div>
+        <div class="flex justify-end">
+            <h5 id="percent" class="mt-1 font-medium">0%</h5>
+        </div>
+
+        <div class="flex justify-between mt-4">
+            <h3>Song.mp3</h3>
+            <button id="downloadBtn"
+                class="bg-green-500 text-white rounded font-medium px-5 py-2 text-xs active:scale-95">
+                Download
+            </button>
+        </div>
+    </div>
+</body>
+<script>
+    var btn = document.querySelector('#downloadBtn');
+    var percent = document.querySelector('#percent');
+    var growth = document.querySelector('#growth');
+
+    var grow = 0;
+    var speed = Math.floor(Math.random() * 50 + 30); // Random speed between 30ms - 80ms
+    console.log("Speed:", speed);
+
+    btn.addEventListener('click', function () {
+        var int = setInterval(() => {
+            if (grow < 100) {
+                grow++;
+                percent.innerHTML = grow + "%";
+                growth.style.width = grow + '%';
+
+            } else {
+                clearInterval(int);
+                btn.innerHTML = "Downloaded" + " ✅";
+                btn.style.backgroundColor = "grey";
+                btn.disabled = true; // Disable the button
+            }
+        }, speed);
+    });
+
+</script>
+
+</html>
+</div>

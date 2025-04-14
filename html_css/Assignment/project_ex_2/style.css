@@ -1,0 +1,36 @@
+
+nav{
+    background-color: #0073e6;
+    text-align: center;
+    padding: 20px 0;
+}
+a {
+    background-color: #0073e6;
+    text-decoration: none;
+}
+
+.container {
+    width: 800px;
+    height: 100%;
+    margin: 20px auto; 
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post img {
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+
+footer{
+    background: grey;
+    color: white;
+    text-align: center;
+}
+pre i{
+    color: red;
+}
+

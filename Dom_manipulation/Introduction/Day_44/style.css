@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: beige;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#hero{
+    background-color: pink;
+    font-size: 4rem;
+    color: brown;
+}
+#heroine{
+    background-color: yellow;
+    font-size: 4rem;
+    color: black;
+}
+img{
+    height: 90%;
+    object-fit: cover;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: aquamarine;
+    border-radius: 10px;
+    border: none;
+}
+button:active{
+    scale: 0.95;
+}

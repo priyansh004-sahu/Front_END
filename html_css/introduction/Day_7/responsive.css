@@ -1,0 +1,88 @@
+
+.parent{
+    height: 100px;
+    width: 100px;
+    background-color: blueviolet;
+}
+@media (min-width: 768px) {
+    body{
+        font: 40px;
+        padding: 50px;
+    }
+    .parent{
+        width: 100%;
+        background-color: brown;
+    }
+}
+
+.parent1{
+    height: 1000px;
+    width: 1000px;
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: 
+    100px 300px 200px 100px;
+    grid-template-rows: 100px 200px 300px 100px;
+}
+.child{
+    /* height: 300px; */
+    background-color: red;
+    border: 2px solid black ;
+}
+
+.parent2{
+    height: 300px;
+    width: 300px;
+    background-color: wheat;
+    display: grid;
+    grid-template-areas: 
+    "a a ."
+    "a a ."
+    ". b c"
+    /* "a a a"
+    "a a b"
+    "c c c"; */
+;   
+}
+.child2 {
+    background-color: red;
+    border: 2px solid black;
+
+}
+.child-a {
+     grid-area: a;
+     background-color: green;
+}
+.child-b {
+    grid-area: b;
+    background-color: blue;
+}
+.child-c {
+    grid-area: c;
+    background-color: yellow;
+}
+
+.parent3{
+    height: 300px;
+    width: 400px;
+
+    background-color: wheat;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+.child3 {
+    height: 100px;
+    background-color: red;
+    border: 2px solid black;
+
+}
+.child-d {
+    background-color: green;
+}
+.child-e {
+   background-color: blue;
+}
+.child-f {
+   background-color: yellow;
+}
